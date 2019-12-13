@@ -1,0 +1,12 @@
+.content .off{
+    display: none;
+}
+
+.content .active {
+    display: block;
+}
+
+button.active{
+    background-color: blue;
+}
+

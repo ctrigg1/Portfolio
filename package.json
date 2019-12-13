@@ -1,0 +1,29 @@
+{
+  "name": "babelpractice",
+  "version": "1.0.0",
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "node_modules/.bin/babel src/index.js -w -o distro/bundle.js",
+    "build": "node_modules/.bin/webpack --mode production",
+    "develop": "node_modules/.bin/webpack-dev-server --mode development"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.5",
+    "css-loader": "^3.2.1",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "babel-loader": "^8.0.6"
+  }
+}

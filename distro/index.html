@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Homepage</title>
+    
+    
+</head>
+
+<body>
+    <nav class = "navbar">
+        <div class="">
+            <div class="emblem">
+                <a href=""><img src="https://fontmeme.com/permalink/191208/fd9da02ee44a442f1122d0cca1edf0e3.png" alt="monogram-fonts"></a>
+            </div>
+            <div class="dropdown" style="display: inline-block">
+                <div class="trigger ">Projects
+                    <div class="content">
+                            <li><a href="./quiz.html">Quiz -- <span style="color: green">Operational</span></a></li>
+                        <li><a href="404.html">NASA POTD -- <span style="color: yellow">In Progress</span></a></li>
+
+                        <li><a href="404.html">To-Do List -- <span style="color: yellow">In Progress</span></a></li>
+                        <li><a href="404.html">Chatroom -- <span style="color: yellow">In Progress</span></a></li>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navitems">
+                <a style="font-size: 20px; text-decoration: none; color:white" href="mailto:cjtriggs.socialmedia@gmail.com?Subject=Inquiry" target="_top">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <img class="construction" src="/img/4-43094_under-construction-png-transparent-png.png" alt="">
+        <div class = "navyblue">
+            <div class='container'></div>
+            <h2 ><span id="welcome">Welcome to</span> <span id="domain">&nbsp;My Portfolio</span></h2>
+
+        </div>
+
+        <div class="gray">
+            <div class="page-description">
+                <p>  &nbsp;&nbsp;&nbsp;&nbsp; This site is utilized as a platform to showcase a few of my programming projects.  
+                    Please browse around and feel free to reach out to me if you have any questions.  I will update this page periodically, 
+                    so feel free to follow me at the links below.</p>
+                <h2 class="about-header" >A little about me....</h2>
+                <p class="about-text"> &nbsp;&nbsp;&nbsp;&nbsp; I'm an avid programmer that resides in Central Texas.  I learned the basics of programming C++ in college, but I was never 
+                    able to start a career as a programmer due to my service in the military.  Now that I'm no longer on active duty, I'm hoping to finally put my skills to use!  
+                    At the moment, I'm proficient in HTML, JQuery, Javascript, and CSS.  If you have any questions, or would like to work on a project together, feel free to contact me. 
+                </p>
+                <h2 class="about-header">What's next???</h2>
+                <p class="about-text"> &nbsp;&nbsp;&nbsp;&nbsp; I'm currently studying Node.js, and I'm just starting to scratch the surface of Java.  I plan to take a break from those in a few
+                    weeks to focus on learning SQL and database management.
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <div class="follow">
+                <ul>
+                    <li><a href="https://twitter.com/ctriggsprogram1?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">
+                        </a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+                        </script></li>
+                    <li><a class="github-button" href="https://github.com/ctrigg1" aria-label="Follow @ctrigg1 on GitHub"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB7XV91gKexudnCtXvCt3doaDhZhAs1z88",
+    authDomain: "portfolio-87a90.firebaseapp.com",
+    databaseURL: "https://portfolio-87a90.firebaseio.com",
+    projectId: "portfolio-87a90",
+    storageBucket: "portfolio-87a90.appspot.com",
+    messagingSenderId: "251994824763",
+    appId: "1:251994824763:web:e137287400f00f61ca7c1e",
+    measurementId: "G-R7DLHT4ND9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  db = firebase.firestore();
+
+</script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="assets/bundle.js"></script>
+</body>
+
+</html>

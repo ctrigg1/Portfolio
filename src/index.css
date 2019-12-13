@@ -1,0 +1,310 @@
+:root{
+    --theme-color: rgb(167, 167, 132);
+    --text-color:  rgb(70, 70, 133);
+}
+
+html{
+    width: auto;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+body{
+    position: static;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+    text-align: center;
+    border: none;
+}
+
+.construction{
+    position: absolute;
+    display: none;
+    opacity: 0.6;
+    width: 90%;
+    height: 90%;
+    top: 2%;
+    margin: 2% 2%;
+}
+
+div.header {
+    position: relative;
+    width: 80%;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
+}
+
+div.header h1 {
+    position: absolute;
+    color:  rgb(167, 167, 132);
+    padding: 5px;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    margin: 0px auto;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.emblem {
+    position: absolute;
+    background-color: whitesmoke;
+    display: inline-block;
+    border-radius: 5px 5px 0px 0px;;
+    top: 5px;
+    left: 5px;
+    padding: 10px 10px 0px 10px;
+}
+
+.emblem a{
+    width: 75%;
+    height: 75%;
+}
+
+.emblem img{
+    height: 22px;
+}
+
+.navbar{
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(11,3,77,1) 79%);
+    width: 100%;
+    height: 40px;
+    position: relative;
+    top: 0px;
+    z-index: 2;
+}
+
+.navitems{
+    width: auto;
+    padding: 5px;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navitems:hover {
+    background-color: rgb(26, 10, 177)
+}
+
+main{
+    height: auto;
+    position: relative;
+    min-width: 100%;
+    margin-top: 25px;
+}
+
+main h2{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 30px auto;
+}
+
+main p{
+    font-size: 20px;
+    color: white;
+    text-align: left;
+}
+
+#welcome {
+    color:  lightskyblue;
+    font-size: 1.5em;
+}
+
+#domain {
+    color: white;
+    font-size: 1.5em;
+}
+
+footer{
+    position: static;
+    bottom: 0;
+    left: 0px;
+    height:auto;
+    width: 100%;
+    margin-top: 300px;
+    padding: 10px 0px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(59, 59, 59);
+    display: inline-block;
+}
+
+footer p{
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer ul{
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+}
+footer ul li{
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.follow{
+    margin-left: 0px;
+}
+
+.navyblue{
+    display: block;
+    position: relative;
+    background-color: rgba(11,3,77,1);
+    height: auto;
+    width: 33%;
+    margin: 0px auto;
+    top: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px gray;
+    z-index: -1;
+}
+
+.gray{
+    display: block;
+    position: relative;
+    padding: 50px 10px 10px 10px ;
+    width: 100%;
+    height: 50%;
+    background-color: lightslategrey;
+    z-index: -2;
+    box-shadow: 10px 5px 5px gray;
+    border-radius: 20px;
+}
+
+.page-description{
+    width: 50%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgb(245, 255, 250, 0.2);
+    border: ridge;
+}
+
+@media screen and (max-width: 1375px) {
+    h2 {
+      font-size: 18px;
+    }
+    main p{
+        font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    h2 {
+      font-size: 16px;
+    }
+    main p{
+        font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    div.emblem{
+        display: none;
+    }
+    .navitems{
+        display: block;
+    }
+    .navbar{
+        text-align: center;
+        background-color:  #0b034d;
+        width: 100%;
+        height: 75px;
+        position: fixed;
+        top: 0px;
+    }
+    .navyblue{
+        margin-top: 20%;
+    }
+  }
+
+
+  @media screen and (max-width: 700px) {
+    h2 {
+      font-size: 16px;
+      margin: 10px auto;
+    }
+    main p{
+        font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 615px) {
+    main{
+        width: 40%;
+    }
+    h2 {
+      font-size: 16px;
+      margin: 10px auto;
+    }
+    main p{
+        font-size: 12px;
+    }
+    div.emblem{
+        display: none;
+    }
+}
+      @media screen and (max-width: 525px) {  
+    h2 {
+      font-size: 16px;
+      margin: 10px auto;
+    }
+    main{
+        width: 100%;
+        margin-left: 0%;
+    }
+    main p{
+        font-size: 12px;
+    }
+    .navyblue{
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+        margin: 150px auto 0 auto;
+    }
+}
+@media screen and (max-width: 375px) {  
+    h2 {
+      font-size: 16px;
+      margin: 5px auto;
+    }
+    main{
+        margin-top: 150px;
+        margin-left: 0%;
+        width: 100%;
+    }
+    main p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-height: 600px) {  
+    h2 {
+        font-size: 12px;
+        margin: 5px auto;
+        top: 50px;
+    }
+    main{
+        margin-top: 100px;
+        margin-left: 10%;
+        width: 80%;
+    }
+    main p{
+        font-size: 10px;
+        color: white;
+    }
+    .navyblue{
+        height: auto;
+    }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+
+    <style>
+        .answers {
+            display: inline-block;
+            width: 20%;
+            padding-bottom: 10px;
+        }
+        p {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body >
+    <!-- top div -->
+    <div class="container text-center p-4">
+        <h1 class="text-info">Pop Culture Quiz</h1>
+        <p id="result-p" class="d-none">Your Score is: <span id="result">0%</span></p>
+    </div>
+    
+<!-- //contains questions and buttons -->
+    <div class="container-fluid bg-info w-100 text-white">
+        <form action="" class="myForm m-0 p-0">
+            <div>
+                <div class="pt-1">
+                    <h2>Checking knowledge....</h2>
+                </div>
+                <hr>
+                <div>
+                    <p>Question 1: Who was the first Avenger in the MCU?</p>
+                </div>
+                <div class="container-fluid w-auto">
+                    <div class="answers">
+                        <input type="radio" name="q1" value="A" required>
+                        <label for="" class="w-auto">Iron Man</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q1" value="B">
+                        <label for="" class="w-auto">The Incredible Hulk</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q1" value="C">
+                        <label for="">Captain America</label>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Question 2: Which movie was the highest grossing film ever in the U.S.?</p>
+                </div>
+                <div class="container-fluid w-auto">
+                    <div class="answers">
+                        <input type="radio" name="q2" value="A" required>
+                        <label for="" class="w-auto">Joker</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q2" value="B">
+                        <label for="" class="w-auto">Avengers: Endgame</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q2" value="C">
+                        <label for="">Titanic</label>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Question 3: Who's the voice actor for the Guardians of the Galaxy character Rocket?</p>
+                </div>
+                <div class="container-fluid w-auto">
+                    <div class="answers">
+                        <input type="radio" name="q3" value="A" required>
+                        <label for="" class="w-auto">Beyonce</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q3" value="B">
+                        <label for="" class="w-auto">Donald Glover</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q3" value="C">
+                        <label for="">Bradley Cooper</label>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Question 4: Who was the number one NBA draft pick in 2019?</p>
+                </div>
+                <div class="container-fluid w-auto">
+                    <div class="answers">
+                        <input type="radio" name="q4" value="A" required>
+                        <label for="" class="w-auto">Lonzo Ball</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q4" value="B">
+                        <label for="" class="w-auto">Lebron James</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q4" value="C">
+                        <label for="">Zion Williamson</label>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Question 5: Which team won the NFL championship in 2019?</p>
+                </div>
+                <div class="container-fluid w-auto">
+                    <div class="answers">
+                        <input type="radio" name="q5" value="A" required>
+                        <label for="" class="w-auto">Falcons</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q5" value="B">
+                        <label for="" class="w-auto">Seahawks</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q5" value="C">
+                        <label for="">Patriots</label>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Question 6: The US women's soccer team finished in which place at the 2019 FIBA World Cup?</p>
+                </div>
+                <div class="container-fluid w-auto">
+                    <div class="answers">
+                        <input type="radio" name="q6" value="A" required>
+                        <label for="" class="w-auto">Third</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q6" value="B">
+                        <label for="" class="w-auto">First</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q6" value="C">
+                        <label for="">Second</label>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Question 7: Which female singer has the most American Music Award wins?</p>
+                </div>
+                <div class="container-fluid w-auto">
+                    <div class="answers">
+                        <input type="radio" name="q7" value="A" required>
+                        <label for="" class="w-auto">Zoey Saldana</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q7" value="B">
+                        <label for="" class="w-auto">Madonna</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q7" value="C">
+                        <label for="">Taylor Swift</label>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Question 8: Which actress plays the role of Black Widow in the MCU?</p>
+                </div>
+                <div class="container-fluid w-auto">
+                    <div class="answers">
+                        <input type="radio" name="q8" value="A" required>
+                        <label for="" class="w-auto">Brie Larson</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q8" value="B">
+                        <label for="" class="w-auto">Scarlett Johannsen</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q8" value="C">
+                        <label for="">Meryl Streep</label>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Question 9: What's the NYSE ticker symbol for Ford Motor Company?</p>
+                </div>
+                <div class="container-fluid w-auto">
+                    <div class="answers">
+                        <input type="radio" name="q9" value="A" required> 
+                        <label for="" class="w-auto">FMC</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q9" value="B">
+                        <label for="" class="w-auto">AMZN</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q9" value="C">
+                        <label for="">F</label>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Question 10:  What's the motto of Austin, TX?</p>
+                </div>
+                <div class="container-fluid w-auto">
+                    <div class="answers">
+                        <input type="radio" name="q10" value="A" required>
+                        <label for="" class="w-auto">ATX 4 Life</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q10" value="B">
+                        <label for="" class="w-auto">Keep Austin Weird</label>
+                    </div>
+                    <div class="answers">
+                        <input type="radio" name="q10" value="C">
+                        <label for="">Enjoy the BBQ</label>
+                    </div>
+                </div>
+                <hr>
+                <div id="submit" style ="text-align: center">
+                    <input type="submit" style= "width: 100px; padding: 5px; margin: 15px auto">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+<script src="/assets/quiz.js"></script>
+</body>
+</html>
