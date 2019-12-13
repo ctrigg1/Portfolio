@@ -1,0 +1,6 @@
+git remote add origin git@git.assembla.com:portfolio/space.space_name.git
+#set a new remote
+git remote -v
+#Verify new remote
+origin  git@git.assembla.com:portfolio/space.space_name.git (fetch)
+origin  git@git.assembla.com:portfolio/space.space_name.git (push)
