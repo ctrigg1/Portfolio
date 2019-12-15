@@ -5,6 +5,7 @@ module.exports = {
         index: './src/index.js',
         quiz: './src/my-ui/quiz.js',
         nasa: './src/my-ui/nasa.js',
+        weather: './src/my-ui/weather.js'
     },
     output: {
         path: path.resolve(__dirname, 'distro/assets'),

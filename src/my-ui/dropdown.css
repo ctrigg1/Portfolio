@@ -30,6 +30,7 @@
 
 .dropdown .content li{
     width: auto;
+    padding: 5px;
     background-color: #1e1097;
 }
 

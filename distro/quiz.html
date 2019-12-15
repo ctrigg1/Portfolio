@@ -10,11 +10,30 @@
     <style>
         .answers {
             display: inline-block;
-            width: 20%;
-            padding-bottom: 10px;
+            width: 25%;
+            margin-bottom: 10px;
+            margin-right: 5%;
+            border: solid;
+            text-align: left;
         }
         p {
-            font-size: 24px;
+            font-size: 1.1rem;
+        }
+        @media screen and (max-width: 900px) {
+            p {
+                font-size: .8rem;
+            }
+            label {
+                font-size: .6rem;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            p {
+                font-size: .7rem;
+            }
+            label {
+                font-size: .5rem;
+            }
         }
     </style>
 </head>
@@ -30,7 +49,7 @@
         <form action="" class="myForm m-0 p-0">
             <div>
                 <div class="pt-1">
-                    <h2>Checking knowledge....</h2>
+                    <h5>You must make one selection per question.  Your score will show after you've clicked the submit button below.</h2>
                 </div>
                 <hr>
                 <div>
@@ -47,7 +66,7 @@
                     </div>
                     <div class="answers">
                         <input type="radio" name="q1" value="C">
-                        <label for="">Captain America</label>
+                        <label for="" class="w-auto">Captain America</label>
                     </div>
                 </div>
                 <hr>
@@ -65,7 +84,7 @@
                     </div>
                     <div class="answers">
                         <input type="radio" name="q2" value="C">
-                        <label for="">Titanic</label>
+                        <label for="" class="w-auto">Titanic</label>
                     </div>
                 </div>
                 <hr>
@@ -83,7 +102,7 @@
                     </div>
                     <div class="answers">
                         <input type="radio" name="q3" value="C">
-                        <label for="">Bradley Cooper</label>
+                        <label for="" class="w-auto">Bradley Cooper</label>
                     </div>
                 </div>
                 <hr>
@@ -101,7 +120,7 @@
                     </div>
                     <div class="answers">
                         <input type="radio" name="q4" value="C">
-                        <label for="">Zion Williamson</label>
+                        <label for="" class="w-auto">Zion Williamson</label>
                     </div>
                 </div>
                 <hr>
@@ -119,7 +138,7 @@
                     </div>
                     <div class="answers">
                         <input type="radio" name="q5" value="C">
-                        <label for="">Patriots</label>
+                        <label for="" class="w-auto">Patriots</label>
                     </div>
                 </div>
                 <hr>
@@ -137,7 +156,7 @@
                     </div>
                     <div class="answers">
                         <input type="radio" name="q6" value="C">
-                        <label for="">Second</label>
+                        <label for="" class="w-auto">Second</label>
                     </div>
                 </div>
                 <hr>
@@ -155,7 +174,7 @@
                     </div>
                     <div class="answers">
                         <input type="radio" name="q7" value="C">
-                        <label for="">Taylor Swift</label>
+                        <label for="" class="w-auto">Taylor Swift</label>
                     </div>
                 </div>
                 <hr>
@@ -173,7 +192,7 @@
                     </div>
                     <div class="answers">
                         <input type="radio" name="q8" value="C">
-                        <label for="">Meryl Streep</label>
+                        <label for="" class="w-auto">Meryl Streep</label>
                     </div>
                 </div>
                 <hr>
@@ -191,7 +210,7 @@
                     </div>
                     <div class="answers">
                         <input type="radio" name="q9" value="C">
-                        <label for="">F</label>
+                        <label for="" class="w-auto">F</label>
                     </div>
                 </div>
                 <hr>
@@ -209,7 +228,7 @@
                     </div>
                     <div class="answers">
                         <input type="radio" name="q10" value="C">
-                        <label for="">Enjoy the BBQ</label>
+                        <label for="" class="w-auto">Enjoy the BBQ</label>
                     </div>
                 </div>
                 <hr>

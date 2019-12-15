@@ -1,0 +1,41 @@
+.container {
+    width: 400px;
+}
+body{
+    background: #eeedec;
+    letter-spacing: 0.2em;
+    font-size: 0.8em;
+}
+img {
+    width: 369px;
+}
+
+.details {
+    border-radius: 50%;
+    position: relative;
+    background-color: rgb(119, 136, 153, 0.4);
+    color: rgb(250, 250, 250);
+    width: 50%;
+    height: 135%;
+    margin: 10px auto;
+    padding: 10px;
+    top: -80px;
+}
+
+.details-box {
+    height: 150px;
+    background-color: gray;
+}
+
+.time {
+    background-color: rgb(128, 128, 128, 0.2);
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: bottom;
+    border: solid rgb(0, 0, 0, 0.2);
+}
+
+.time p{
+    margin: 0px;
+}
