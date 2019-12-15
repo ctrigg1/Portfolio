@@ -1,10 +1,14 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
+    entry:  {
+        index: './src/index.js',
+        quiz: './src/my-ui/quiz.js',
+        nasa: './src/my-ui/nasa.js',
+    },
     output: {
         path: path.resolve(__dirname, 'distro/assets'),
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'distro'),

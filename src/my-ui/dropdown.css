@@ -1,8 +1,9 @@
 .dropdown{
-    width: 33%;
+    width: auto;
     position: relative;
     display: inline-block;
-    text-align: left;
+    text-align: center;
+    margin-right: 33%;
 }
 
 .dropdown .trigger{
@@ -11,7 +12,7 @@
     top: 50%;
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    width: 35%;
+    width: auto;
     padding: 5px;
 }
 
@@ -28,25 +29,21 @@
 }
 
 .dropdown .content li{
-    margin: 0px 20px;
-    padding: 0px 20px;
+    width: auto;
     background-color: #1e1097;
-    padding: 5px;
 }
 
 .dropdown .content a{
     text-decoration: none;
     color:white;
-    padding: 3px;
+    padding: 10px;
 }
 
 .dropdown .content{
     display: none;
     position: absolute;
     top: 22px;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
+    width: auto;
     font-size: 15px;
     list-style: none;
 }
@@ -65,7 +62,7 @@
         text-align: center;
     }
     .dropdown .trigger{
-        min-width: 25%;
+
         width: auto;
         margin: 0%;
         display: inline-block;
@@ -78,7 +75,6 @@
     }
     .dropdown .content{
         position: absolute;
-        top: 10px;
-        left: 50%;
+        top: 20px;
     }
   }

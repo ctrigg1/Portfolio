@@ -113,6 +113,10 @@ main p{
     text-align: left;
 }
 
+.github{
+    z-index: 5;
+}
+
 #welcome {
     color:  lightskyblue;
     font-size: 1.5em;
@@ -129,7 +133,7 @@ footer{
     left: 0px;
     height:auto;
     width: 100%;
-    margin-top: 300px;
+    margin-top: 250px;
     padding: 10px 0px;
     font-family: 'Times New Roman', Times, serif;
     background-color: rgb(59, 59, 59);
@@ -155,7 +159,8 @@ footer ul li{
 }
 
 .follow{
-    margin-left: 0px;
+    margin: 100px 0px 0px 0px;
+
 }
 
 .navyblue{
