@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Chat Project</title>
+    <style>
+    body, html{
+      min-height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(4, 200px);
+      padding: 0px;
+      margin: 0px;
+    }
+    .aside{
+      grid-column: 1 /  span 4;
+      grid-row: 1 / 12;
+      border: solid;
+      padding: 0px;
+      margin: 0px;
+    }
+    .main{
+      grid-column: 5 / span 8;
+      grid-row: 1 / 12;
+      overflow: scroll;
+      border: solid;
+      padding: 0px;
+      margin: 0px;
+    }
+    form{
+      width: 100%;
+      margin:  50px auto;
+      font-size: 0px;
+    }
+    form div{
+      display: inline-block;
+    }
+    </style>
+</head>
+<body>
+  <div class="grid">
+
+    <aside class="aside">
+        <h1>Chatroom Project</h1>
+          <form class="new-name">
+                <div class="input-2"><input type="text" id="name"  required></div>
+                <div class="input-3"><input type="submit" id="updateName"  value="update"></div>     
+          </form>
+
+        <form class="new-chat">
+            <div class="input-5"><input type="text" id="message" class="input-second" required></div>
+            <div class="input-6"><input type="submit" class="input-third" value="send"></div>
+        </form>
+    </aside>
+
+    <main class="main">
+          <div class="rooms">Change rooms:
+          <button class="" name="main">#main</button>
+          <button class="" name="music">#music</button>
+          <button class="" name="movies">#movies</button>
+          <button class="" name="games">#games</button>
+        </div>
+        <div class="">
+          <ul class='show-chat'></ul>
+    </main>
+
+  </div>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB7XV91gKexudnCtXvCt3doaDhZhAs1z88",
+    authDomain: "portfolio-87a90.firebaseapp.com",
+    databaseURL: "https://portfolio-87a90.firebaseio.com",
+    projectId: "portfolio-87a90",
+    storageBucket: "portfolio-87a90.appspot.com",
+    messagingSenderId: "251994824763",
+    appId: "1:251994824763:web:e137287400f00f61ca7c1e",
+    measurementId: "G-R7DLHT4ND9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+  
+</script>
+
+  <script src="./assets/chat.js"></script>
+
+</body>
+</html>
