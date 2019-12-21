@@ -15,53 +15,100 @@
     .grid{
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat(4, 200px);
+      grid-template-rows: repeat(12, 75px);
       padding: 0px;
       margin: 0px;
     }
     .aside{
       grid-column: 1 /  span 4;
-      grid-row: 1 / 12;
-      border: solid;
+      grid-row: 1 / 4;
+      border: solid 1px;
       padding: 0px;
       margin: 0px;
+      background-color: rgb(150, 150, 150);
+    }
+    .disp{
+      display: inline-block;
+    }
+    .aside2{
+      grid-column: 1 /  span 4;
+      grid-row: 4 / span 8;
+      border: solid 1px;
+      background-color: rgb(150, 150, 150);
+      padding: 20% 5%;
+    }
+    .aside h1{
+      width: 50%;
+      margin: 50px auto;
     }
     .main{
       grid-column: 5 / span 8;
       grid-row: 1 / 12;
       overflow: scroll;
-      border: solid;
+      justify-items: right;
+      border: solid 1px;
       padding: 0px;
       margin: 0px;
+      background-color: rgb(233, 233, 233);
     }
-    form{
-      width: 100%;
+    .new-chat{
+      width: 80%;
+      margin:  50px auto 0px auto;
+      font-size: 0px;
+    }
+    .new-chat div{
+      display: inline-block;
+    }
+    .new-name{
+      width: 80%;
       margin:  50px auto;
       font-size: 0px;
     }
-    form div{
+    .new-name div{
       display: inline-block;
+    }
+    ul{
+      justify-content: right;
+      list-style: none;
+      max-width: 75%;
+    }
+    li{
+      justify-content: right;
+      margin: 10px 0px;
     }
     </style>
 </head>
 <body>
+  <a href="./index.html">Return to Homepage</a>
   <div class="grid">
 
     <aside class="aside">
         <h1>Chatroom Project</h1>
-          <form class="new-name">
-                <div class="input-2"><input type="text" id="name"  required></div>
-                <div class="input-3"><input type="submit" id="updateName"  value="update"></div>     
-          </form>
-
         <form class="new-chat">
-            <div class="input-5"><input type="text" id="message" class="input-second" required></div>
-            <div class="input-6"><input type="submit" class="input-third" value="send"></div>
+          <div class="input-5"><input type="text" id="message" class="input-second" required></div>
+          <div class="input-6"><input type="submit" class="input-third" value="Send Message"></div>
         </form>
+        <p class="msgsent" style="text-align: center;"></p>
+
+    </aside>
+
+    <aside class="aside2">
+      <form class="new-name">
+        <div class="input-2"><input type="text" id="name"  required></div>
+        <div class="input-3"><input style="width: 100%" type="submit" id="updateName"  value="Update Name"></div>     
+      </form>
+        <span>Username:</span>
+        <p class="currentUsername disp"></p>
+        <br>
+        <span>Room:</span>
+        <p class="currentRoom disp"></p>
+        <br>
+        <span>Log-in Time:</span>
+        <p class="loginTime disp"></p>
     </aside>
 
     <main class="main">
-          <div class="rooms">Change rooms:
+          <div class="rooms" style="text-align: center">Change rooms:
           <button class="" name="main">#main</button>
           <button class="" name="music">#music</button>
           <button class="" name="movies">#movies</button>

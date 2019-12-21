@@ -177,7 +177,7 @@ footer ul li{
 .gray{
     display: block;
     position: relative;
-    padding: 50px 0px ;
+    padding: 50px 0px;
     width: 100%;
     height: 50%;
     background-color: lightslategrey;
@@ -217,7 +217,7 @@ footer ul li{
         display: none;
     }
     .navitems{
-        display: block;
+        display: inline-block;
     }
     .navbar{
         text-align: center;

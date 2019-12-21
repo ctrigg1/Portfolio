@@ -19,7 +19,7 @@
     }
     div {
         margin: 30px 0px;
-        background-color:rgba(3, 45, 124, 0.2)
+        background-color:rgba(0, 68, 196, 0.747)
     }
     .notactive {
         display: none;
@@ -37,20 +37,29 @@
         display: inline-block;
         margin: 0px auto;
         padding: 10px 0px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
     .card{
         margin: 0px;
         padding: 0px;
-        background-color:rgba(3, 45, 124, 0.2)
+        background-color: rgba(0, 68, 196, 0.747);
+        color: white;
     }
     hr {
         padding: 0px;
         margin: 0px 0px 10px 0px;
     }
+    .description{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.1rem;
+        padding: 10px;
+    }
     </style>
 </head>
 <body class="bg-light">
+
+    <a href="./index.html">Return to Homepage</a>
 
     <div class="container">
         <h2 class="text-muted bg-light text-center">NASA Picture of the day</h2>
@@ -58,23 +67,24 @@
     <div class="container">
         <form action="" class="searchDate">
             <div class="input-group">
-                <span class="input-text">Enter a date</span>
-                <input type="text" class="" placeholder="YYYY-MM-DD" id="input" required>
+                <span class="input-text" style="color: white; background-color: rgba(0, 68, 196, 0.747)">Enter a date</span>
+                <input type="text" class="" placeholder="YYYY-MM-DD then press Enter key" id="input" required>
             </div>
         </form>
     </div>
     <div class="container">
         <div class="card">
-            <div style="text-align: center; padding: 10px 0px; margin: 0px;">
+            <div style="text-align: center; padding: 0px 0px; margin: 0px;">
                 <span class="card-span">Date of Media:</span>
                 <span class="displayDate card-span"></span>
                 <hr>
+                <span class="card-span">Title:</span>
                 <span class="displayTitle card-span"></span>
             </div>
-        <iframe width="400" height="315" src="" frameborder="0" id="nasaVideo" class="notactive" allowfullscreen></iframe>
+        <iframe width="auto" height="315" src="" frameborder="0" id="nasaVideo" class="notactive" allowfullscreen></iframe>
         <img id="nasaPhoto" src="" alt="" height="25%" class="notactive">
         <hr>
-        <span class="description">
+        <span class="description" style="color: white;">
         </span>
         </div>
     </div>

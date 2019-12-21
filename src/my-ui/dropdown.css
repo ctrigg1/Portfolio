@@ -30,13 +30,13 @@
 
 .dropdown .content li{
     width: auto;
-    padding: 5px;
-    background-color: #1e1097;
+    padding: 10px;
+    background-color: rgb(0, 19, 129);
+
 }
 
 .dropdown .content a{
     text-decoration: none;
-    color:white;
     padding: 10px;
 }
 
