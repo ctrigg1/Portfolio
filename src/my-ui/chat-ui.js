@@ -5,7 +5,11 @@ export class Chatroom{
         this.username = username;
         this.room = room;
         this.database = db.collection(this.room);
-        this.color = ""
+        this.dbRooms = db.collection('rooms');
+    }
+// signup
+    signup(email, password){
+        auth.createUserWithEmailAndPassword(email,password).then(response => console.log(response.user));
     }
 
 // add Chat
@@ -26,22 +30,27 @@ export class Chatroom{
 
     updateChatWindow(datapoint, chatWindow, dispUser, dispRoom){
 
-        if(this.color === 'rgb(0, 255, 255)'){
-            this.color = 'rgb(255, 255, 255)'
-        } else if(this.color !== 'rgb(0, 255, 255)'){
-            this.color = 'rgb(0, 255, 255)';
+        var color, margin, br, align;
+
+        if(this.username === datapoint.data().username){
+            color = 'rgb(255, 255, 255)';
+            margin = 'margin-left: 30%;';
+            br = '15px 0 0 15px';
+            align = 'left';
+        } else {
+            color = 'rgb(3, 0, 172, 0.2)';
+            margin = 'margin-right: 30%;';
+            br = '0px 15px 15px 0px';
+            align = 'left';
         }
         let html = 
-       `<li class="list-group-item" style="background-color: ${this.color}" data-id="${datapoint.id}">
+       `<div class="" style="background-color: ${color}; text-align: ${align}; border-radius: ${br}; ${margin};" data-id="${datapoint.id}">
+       <div>
        <span class="username" style="font-weight: bold">${datapoint.data().username}:</span>
        <span class="message">${datapoint.data().message}</span>
-       <div class="time">${datapoint.data().created_at.toDate().toString().slice(0, 28)}</div>
-       </li>`
-        dispUser.innerHTML = this.username;
-        dispRoom.innerHTML = this.room;
+       </div>
+       <span class="time" style="font-size:0.8rem display=block">${datapoint.data().created_at.toDate().toString().slice(0, 24)}</span>
+       <div>`
        chatWindow.innerHTML += html; 
-       console.log(this.color);
-    }
-    clearChatWindow(chatWindow){
     }
 }
