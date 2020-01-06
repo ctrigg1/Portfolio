@@ -13,20 +13,16 @@ const logOut = document.querySelector(".logout");
 const newuser = document.querySelector(".new-user");
 const signupwindow = document.querySelector(".signupwindow");
 
-auth.onAuthStateChanged(user => {
-    if(user) {
-        console.log("user is logged in: ", user.displayName);
+// window.addEventListener('load', auth.signOut());
+
+auth.onAuthStateChanged(response => {
+    console.log(response);
+    if(response) {
+        console.log("user is logged in: ", auth.currentUser.displayName);
             // update UI
-        chatroom.database.onSnapshot(snapshot => {
-            snapshot.docChanges().sort((a,b) => {
-                return a.doc.data().created_at.toDate() - b.doc.data().created_at.toDate();
-            }).forEach(snap => {
-                if(snap.type === "added"){
-                    chatroom.updateChatWindow(snap.doc,showChat, 'anon', 'main')
-                }
-            })
-    })
-    loginScreen.style.display = 'none';
+        chatroom.username = auth.currentUser.displayName;
+        chatroom.liveupdates(showChat);
+        loginScreen.style.display = 'none';
     } else {
         console.log('user logged out');
         loginScreen.style.display = 'block';
@@ -36,50 +32,27 @@ auth.onAuthStateChanged(user => {
 // new user
 newuser.addEventListener('click', e => {
     e.preventDefault();
-    console.log(e.target);
-    console.log(signUp);
     signupwindow.classList.remove('hide');
 })
 
 // login or new user auth
 logIn.addEventListener("submit", e => {
     e.preventDefault();
-
-    auth.signInWithEmailAndPassword(logIn.email.value, logIn.password.value).then(cred => console.log(cred.displayName));
-
-    // update UI
-    chatroom.database.onSnapshot(snapshot => {
-        snapshot.docChanges().sort((a,b) => {
-            return a.doc.data().created_at.toDate() - b.doc.data().created_at.toDate();
-        }).forEach(snap => {
-            if(snap.type === "added"){
-                chatroom.updateChatWindow(snap.doc,showChat, 'anon', 'main')
-            }
-        })
-    })
+    auth.signInWithEmailAndPassword(logIn.email.value, logIn.password.value);
     loginScreen.style.display = 'none';
+    logIn.reset();
 })
 
 // close sign-up auth
 document.querySelector(".closewindow").addEventListener('click', e => {
-    console.log(e.target);
     signupwindow.classList.add('hide');   
 })
 
 signUp.addEventListener("submit", e => {
     e.preventDefault();
-    chatroom.signup(signUp.email.value, signUp.password.value).then(cred => cred.displayName = signUp.username.value);
-
+    chatroom.signup(signUp.email.value, signUp.password.value, signUp.username.value);
     // update UI
-    chatroom.database.onSnapshot(snapshot => {
-        snapshot.docChanges().sort((a,b) => {
-            return a.doc.data().created_at.toDate() - b.doc.data().created_at.toDate();
-        }).forEach(snap => {
-            if(snap.type === "added"){
-                chatroom.updateChatWindow(snap.doc,showChat, 'anon', 'main')
-            }
-        })
-    })
+    signUp.reset();
     loginScreen.style.display = 'none';
     signupwindow.classList.add('hide');  
 })
@@ -99,28 +72,25 @@ newmsg.addEventListener("submit", e => {
 })
 
 // change room listener
-// currentRoom.addEventListener("click", e => {
-//     const newRoom = e.target.name;
-//     chatroom.room = newRoom;
-//     showChat.innerHTML = "";
-//     chatroom.database = db.collection(newRoom);
-
-// // snapshot refresh for room change
-//     chatroom.database.onSnapshot(snapshot => {
-//         snapshot.docChanges().sort((a,b) => {
-//             return a.doc.data().created_at.toDate() - b.doc.data().created_at.toDate();
-//         }).forEach(snap => {
-//             if(snap.type === "added"){
-//                 chatroom.updateChatWindow(snap.doc,showChat, 'anon', 'main')
-//             }
-//         })
-//     })
-// })
+currentRoom.addEventListener("click", e => {
+        
+    chatroom.room = e.target.value;
+    chatroom.database = db.collection(chatroom.room);
+    console.log(chatroom.room);
+    console.log(chatroom.database);
+    showChat.innerHTML = "";
+    chatroom.liveupdates(showChat);
+})
 
 // logout
 logOut.addEventListener('click', e => {
     e.preventDefault();
-    auth.signOut();
+    auth.signOut().then(() => {
+        chatroom.username = "anon";
+        chatroom.room = 'main';
+        chatroom.liveupdates(showChat);
+        window.location.reload(false);
+    });
 })
 
 

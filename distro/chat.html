@@ -21,7 +21,7 @@
   </div>
   <div class="loginPage">
     <div class="loginBox">
-      <h1>Welcome to the Chatroom(v1.0)</h1>
+      <h1>Welcome to the Chatroom</h1>
 
         <form action="" class="logIn">
           <input type="email" placeholder="email" name="email" required>
@@ -36,8 +36,6 @@
 
       <!-- <aside class="aside2">
     
-
-
       </aside> -->
 
       <aside class="aside">
@@ -48,20 +46,25 @@
           </div>
           </form>
 
-          <button type="button" class="logout">Logout</button>
+          <p class="msgsent"></p>
 
-          <p class="msgsent" style="text-align: center;"></p>
-          <br>
-          <a class="return" href="./index.html" style="color:white">Return to Homepage</a>
+        <div class="chatrooms">
+          <label for="rooms">Change Room</label>
+          <select class="rooms" name="rooms" id="Rooms">
+            <option value="main">Main</option>
+            <option value="games">Games</option>
+            <option value="music">Music</option>
+            <option value="movies">Movies</option>
+          </select>
+        </div>
+
+          <div class="logorreturn">
+            <button type="button" class="logout">Log Out</button>
+            <a class="return" href="./index.html">Return to Homepage</a>
+          </div>
       </aside>
 
       <main class="main">
-            <!-- <div class="rooms" style="text-align: center">Change rooms:
-            <button class="" name="main">#main</button>
-            <button class="" name="music">#music</button>
-            <button class="" name="movies">#movies</button>
-            <button class="" name="games">#games</button>
-          </div> -->
             <div class="show-chat"></div>
       </main>
       

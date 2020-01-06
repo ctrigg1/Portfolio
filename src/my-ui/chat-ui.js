@@ -1,5 +1,3 @@
-// let chatWindow = document.querySelector('.chat-window');
-
 export class Chatroom{
     constructor(username, room){
         this.username = username;
@@ -8,8 +6,13 @@ export class Chatroom{
         this.dbRooms = db.collection('rooms');
     }
 // signup
-    signup(email, password){
-        auth.createUserWithEmailAndPassword(email,password).then(response => console.log(response.user));
+    signup(email, password, username){
+        auth.createUserWithEmailAndPassword(email,password).then(response => {
+            console.log(response.user);
+            response.user.updateProfile({
+                displayName: username
+            }).then(() => console.log(response.user.displayName));
+        })
     }
 
 // add Chat
@@ -30,7 +33,7 @@ export class Chatroom{
 
     updateChatWindow(datapoint, chatWindow, dispUser, dispRoom){
 
-        var color, margin, br, align;
+        let color, margin, br, align;
 
         if(this.username === datapoint.data().username){
             color = 'rgb(255, 255, 255)';
@@ -52,5 +55,19 @@ export class Chatroom{
        <span class="time" style="font-size:0.8rem display=block">${datapoint.data().created_at.toDate().toString().slice(0, 24)}</span>
        <div>`
        chatWindow.innerHTML += html; 
+    }
+
+    liveupdates(showchat){
+        this.database.onSnapshot(snapshot => {
+            console.log(snapshot);
+            snapshot.docChanges().sort((a,b) => {
+                return a.doc.data().created_at.toDate() - b.doc.data().created_at.toDate();
+            }).forEach(snap => {
+                if(snap.type === "added"){
+                    this.updateChatWindow(snap.doc, showchat, this.username, this.room)
+                    console.log('message added');
+                }
+            })
+        })
     }
 }
