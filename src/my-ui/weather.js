@@ -1,3 +1,5 @@
+import '../my-ui/weather.css';
+import {Forecast} from './forecast';
 
 const cityForm = document.querySelector('form');
 const details = document.querySelector('.details');

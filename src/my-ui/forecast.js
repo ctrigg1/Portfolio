@@ -1,4 +1,4 @@
-class Forecast{
+export class Forecast{
     constructor(){
         this.key = '&units=imperial&APPID=b4b12e7281ad7d5991673000e7940e1d';
         this.citybase = 'https://api.openweathermap.org/data/2.5/weather?q=';
