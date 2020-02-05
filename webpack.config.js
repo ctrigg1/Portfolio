@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     entry:  {
         index: './src/index.js',
-        quiz: './src/my-ui/quiz.js',
+        // quiz: './src/my-ui/quiz.js',
         nasa: './src/my-ui/nasa.js',
         weather: './src/my-ui/weather.js',
         chat: './src/my-ui/chat-app.js'
