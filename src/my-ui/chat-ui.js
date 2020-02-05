@@ -33,26 +33,25 @@ export class Chatroom{
 
     updateChatWindow(datapoint, chatWindow, dispUser, dispRoom){
 
-        let color, margin, br, align;
+        let color, margin, br; 
+        let align = 'left';
 
         if(this.username === datapoint.data().username){
             color = 'rgb(255, 255, 255)';
             margin = 'margin-left: 30%;';
-            br = '15px 0 0 15px';
-            align = 'left';
+            br = '10px 0 0 10px';
         } else {
             color = 'rgb(3, 0, 172, 0.2)';
             margin = 'margin-right: 30%;';
-            br = '0px 15px 15px 0px';
-            align = 'left';
+            br = '0px 10px 10px 0px';
         }
         let html = 
-       `<div class="" style="background-color: ${color}; text-align: ${align}; border-radius: ${br}; ${margin};" data-id="${datapoint.id}">
+       `<div class="" style="background-color: ${color}; text-align: ${align}; border-radius: ${br}; ${margin}; width: 70%; padding: 0px 10px" data-id="${datapoint.id};">
        <div>
-       <span class="username" style="font-weight: bold">${datapoint.data().username}:</span>
-       <span class="message">${datapoint.data().message}</span>
+       <span class="username" style="font-weight: bold; font-size:1.1rem">${datapoint.data().username}:</span>
+       <span class="message" style="font-size:1.1rem">${datapoint.data().message}</span>
        </div>
-       <span class="time" style="font-size:0.8rem display=block">${datapoint.data().created_at.toDate().toString().slice(0, 24)}</span>
+       <span class="time" style="font-size:0.8rem; display:block; text-align:right">${datapoint.data().created_at.toDate().toString().slice(0, 24)}</span>
        <div>`
        chatWindow.innerHTML += html; 
     }

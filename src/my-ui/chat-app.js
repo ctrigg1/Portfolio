@@ -16,18 +16,14 @@ const signupwindow = document.querySelector(".signupwindow");
 // window.addEventListener('load', auth.signOut());
 
 auth.onAuthStateChanged(response => {
-    console.log(response);
-    if(response) {
+    if(auth.currentUser.uid) {
         console.log("user is logged in: ", auth.currentUser.displayName);
             // update UI
         chatroom.username = auth.currentUser.displayName;
         chatroom.liveupdates(showChat);
         loginScreen.style.display = 'none';
-    } else {
-        console.log('user logged out');
-        loginScreen.style.display = 'block';
-    }
-});
+    } 
+})
 
 // new user
 newuser.addEventListener('click', e => {
@@ -38,7 +34,7 @@ newuser.addEventListener('click', e => {
 // login or new user auth
 logIn.addEventListener("submit", e => {
     e.preventDefault();
-    auth.signInWithEmailAndPassword(logIn.email.value, logIn.password.value);
+    auth.signInWithEmailAndPassword(logIn.email.value, logIn.password.value).catch(err => console.log(err));
     loginScreen.style.display = 'none';
     logIn.reset();
 })
@@ -48,6 +44,7 @@ document.querySelector(".closewindow").addEventListener('click', e => {
     signupwindow.classList.add('hide');   
 })
 
+// new user
 signUp.addEventListener("submit", e => {
     e.preventDefault();
     chatroom.signup(signUp.email.value, signUp.password.value, signUp.username.value);
@@ -76,8 +73,6 @@ currentRoom.addEventListener("click", e => {
         
     chatroom.room = e.target.value;
     chatroom.database = db.collection(chatroom.room);
-    console.log(chatroom.room);
-    console.log(chatroom.database);
     showChat.innerHTML = "";
     chatroom.liveupdates(showChat);
 })

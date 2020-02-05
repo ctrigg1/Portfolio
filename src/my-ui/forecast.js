@@ -1,50 +1,25 @@
 class Forecast{
     constructor(){
-        this.key = 'ov6sDAyA3THiUFNnGpXl6V6nh2AcQmXz';
-        this.citybase = 'http://dataservice.accuweather.com/locations/v1/cities/search';
-        this.weatherbase = `http://dataservice.accuweather.com/currentconditions/v1/`;
+        this.key = '&units=imperial&APPID=b4b12e7281ad7d5991673000e7940e1d';
+        this.citybase = 'https://api.openweathermap.org/data/2.5/weather?q=';
+        // this.weatherbase = `http://dataservice.accuweather.com/currentconditions/v1/`;
     }
 
-    async getWeather(id){
+    async getWeather(city){
 
-        const query = `${id}?apikey=${this.key}`;
-        const response = await fetch(this.weatherbase + query)
-        console.log(response);
+        const query = `${city}`;
+        const response = await fetch(this.citybase + query + this.key);
         const dataJson = await response.json();
-        console.log(dataJson);
-        return dataJson[0];
+        return dataJson;
     }
-    async getCity(city){
-        const query = `?apikey=${this.key}&q=${city}`;
-        const response = await fetch(this.citybase + query);
-        const dataJson = await response.json();
-        return dataJson[0];
-    }
-    async updateCity(city){
-        const cityDets = await this.getCity(city);
-        const weather = await this.getWeather(cityDets.Key);
-        return {
-            cityDets,
-            weather
-        }
-    }
+
+    // async updateCity(city){
+    //     const cityDets = await this.getCity(city);
+    //     const weather = await this.getWeather(cityDets.Key);
+    //     return {
+    //         cityDets,
+    //         weather
+    //     }
+    // }
 
 }
-
-export {Forecast as default}
-
-
-// getCity('Atlanta')
-// .then(data => getWeather(data))
-// .then(data => console.log(data))
-// .catch(err => console.error(err));
-
-
-//     // const locationKey = data[0].Key;
-//     // const location = `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}`;
-
-//     // console.log(location);
-
-//     // const locationQuery = `?apikey=${key}`
-
-//     // console.log(data);
