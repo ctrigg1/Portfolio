@@ -1,0 +1,414 @@
+html, body {
+    position: relative;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 5;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background-color: var(--blueTone);
+    font-size: 130%;
+}
+
+:root{
+    --blueTone: rgb(176, 196, 222, 0.1);
+    --grayTone: rgb(211, 211, 211, 0.3);
+}
+
+.screenNotice{
+    display: none;
+}
+
+input:focus, input:active{
+    border: mediumblue solid 2px;
+}
+
+.title{
+    display: block;
+    position: absolute;
+    width: 100%;
+    max-width: auto;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    border-radius: 10px;
+    animation: enter 1s ease-out forwards;
+    font-family: helvetica;
+    color: rgb(128, 128, 128);
+    font-size: 2.75rem;
+    text-align: center;
+}
+
+@keyframes enter{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.login{
+    display: inline-block;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 8.0vw repeat(4, minmax(425px, auto));
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+    background-color: var(--grayTone);
+    position: relative;
+    border-bottom: solid rgb(128, 128, 128) 1px;
+}
+
+.aside{
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 4;
+    background-color: lightgray;
+    border-right: solid mediumblue 1px;
+    border-left: solid mediumblue 1px;;
+    text-align: center;
+}
+
+.states-label{
+    width: 90%;
+    font-size: 1.5rem;
+    margin-bottom: 0%;
+}
+
+.states{
+    width: 25%;
+    font-size: 1.1rem;
+    margin: 1% 0%;
+    text-align-last: center;
+} 
+
+.states option{
+  color: gray;
+  background-color: var(--grayTone);
+  border-bottom: solid 1px;
+}
+
+#disclaimer {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: mediumblue;
+    margin-top: 1%;
+}
+
+[id=none]{
+    color:rgb(124, 124, 124);
+}
+
+.main{
+    grid-column: 4 / span 6;
+    grid-row: 2 / span 4;
+    position: relative;
+    background-color: white;
+    padding: 1%;
+    font: 1.1rem;
+}
+
+.parameters{
+    margin: 1%;
+}
+
+.parameters label{
+    font-size: 1.1rem;
+}
+
+form{
+    margin-top: 1%;
+}
+
+.views{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
+    margin: 1% 0%;
+}
+
+.stateSelection{
+    width: 100%;
+    height: 80vh;
+}
+
+.hourlywage p{
+    display: inline-block;
+    margin-right: 1%;
+}
+
+.defaultWeeks{
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: mediumblue;
+    margin-top: 1%;
+}
+
+.Cal-fields{
+    display: inline-block;
+    width: 100%;
+    max-width: 35%;
+    font-size: 1.1rem;
+    padding-left: 5%
+}
+
+.Gen-fields{
+    display: inline-block;
+    width: 100%;
+    max-width: 35%;
+    font-size: 1.1rem;
+    padding-left: 5%
+}
+
+.fields{
+    display: inline-block;
+    width: 20%;
+    margin: 2%;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.TTDdiv{
+    display: block;
+    width: 100%;
+    max-height: 40vh;
+    height: auto;
+    overflow-y: auto;
+}
+
+.TTDul{
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+.TTDbutton{
+    display: block;
+    margin: 1% auto;
+    font-size: .9rem;
+    /* box-shadow: 1px 1px 5px black; */
+    width: 18%;
+    background-color: var(--blueTone);
+    color: black;
+    border-radius: 10px;
+}
+
+.buildCalculator{
+    display: block;
+    margin: 2% auto;
+    font-size: .9rem;
+    /* box-shadow: 1px 1px 5px black; */
+    width: 18%;
+    background-color: var(--blueTone);
+    color: black;
+    border-radius: 10px;
+}
+
+input[type="radio"]{
+    margin-left: 2%;
+}
+
+.Resultsdiv{
+    display: inline-block;
+    width: 100%;
+    padding: 1%;
+    height: auto;
+    background-color: var(--blueTone);
+    border: solid rgb(128, 128, 128) 1px;
+    color: black;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.Resultsdiv label{
+    font-size: .9rem;
+    display: inline-block;
+    width: 100%;
+    max-width: 40%;
+    margin-top: 1%;
+}
+
+.results{
+    max-width: 100%;
+    width: 35%;
+    margin-right: 20%;
+    color: black;
+    border: none;
+    background: rgb(211, 211, 211, 0.3);
+    border: solid rgb(128, 128, 128) 1px;
+    padding-left: 5%;
+    margin-top: 1%;
+}
+
+.file-note-copy{
+    display: block;
+    height: 10vh;
+    width: 100%;
+    margin-top: 1%;
+    position: relative;
+}
+
+.file-note{
+    display: inline-block;
+    width: 100%;
+    max-width: 85%;
+    height: 100%;
+    background-color: rgb(176, 196, 222, 0.1);
+    border: solid rgb(128, 128, 128) 1px;
+    color: black;
+    position: absolute;
+    padding: 3px;
+    margin: 2% auto;
+    border-top-left-radius: 3px; 
+    border-bottom-left-radius: 3px;
+}
+
+.mycopy{
+    display: inline-block;
+    position: absolute;
+    left: 85%; 
+    width: 100%;
+    max-width: 15%;
+    height: 100%;
+    /* box-shadow: 1px 1px 5px black; */
+    background-color: var(--blueTone);
+    color: black;
+    margin: 2% auto;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.mycopy img{
+    height: 35%;
+}
+
+.file-note-label{
+    display: block;
+    margin-top: 1%;
+}
+
+.minmax{
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: mediumblue;
+    margin-top: 1%;
+}
+
+iframe{
+    height: auto;
+    width: 100%;
+}
+
+.workCompAct{
+    width: 100%;
+    height: 100vh;
+}
+
+.inactive{
+    display: none;
+}
+
+.active{
+    display: initial;
+}
+
+.disclaimer{
+    background-color: var(--grayTone);
+    color: rgb(128, 128, 128);
+    padding: 5px;
+    margin-top: 1%;
+    font-family: helvetica;
+    font-size: .9rem;
+    border: solid rgb(128, 128, 128) 1px;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.Cal-labels{
+    display: inline-block;
+    width: 40%;
+    max-width: 100%;
+    font-size: .9rem;
+}
+
+.Gen-labels{
+    display: inline-block;
+    width: 40%;
+    max-width: 100%;
+    font-size: 0.9rem;
+}
+
+.MIrates::before{
+    color: black;
+    content: 'Indemnity rates are based on the gross average weekly wage, dependents, and filing status of the injured worker.  Use the chart located here: ';
+}
+.MIrates {
+    display: block;
+    color: mediumblue;
+    font-size: .9rem;
+    margin-top: 1%;
+}
+
+hr{
+    background-color: var(--blueTone);
+}
+
+@media screen and (max-width: 1550px) {
+    html{
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    html{
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    html{
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html{
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    html{
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .screenNotice{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: midnightblue;
+        color: white;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        line-height: 100%;
+    }
+    .screenNotice p{
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
