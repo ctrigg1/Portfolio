@@ -5,7 +5,6 @@ module.exports = {
         index: './src/index.js',
         app: './src/my-ui/app.js',
         nasa: './src/my-ui/nasa.js',
-        weather: './src/my-ui/weather.js',
         chat: './src/my-ui/chat-app.js'
     },
     output: {

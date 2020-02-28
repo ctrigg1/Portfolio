@@ -1,4 +1,3 @@
-import '../my-ui/chat-app.css';
 import {Chatroom} from './chat-ui';
 
 const newmsg = document.querySelector(".new-chat");

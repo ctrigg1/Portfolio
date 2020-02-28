@@ -1,0 +1,116 @@
+html,body{
+  font-family: Coda;
+  height: 100%;
+  width: 100%;
+  font-size: 1.0rem;
+}
+.profile-pic{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.social-media{
+  width: 20px;
+  height: 20px;
+}
+.twitter-follow-button{
+  width: 20px;
+  height: 30px;
+}
+
+.container-for-rotating-container{
+  height: 25%;
+}
+
+.container-for-rotating-container h1{
+  text-align: center;
+  height: 20%;
+}
+
+.rotating-container-div{
+  text-align: center;
+  position: relative;
+  height: 50%;
+  padding: 0%;
+  margin: 0%;
+}
+
+.rotating-container{
+    width: 18%;
+    height: 80%;
+    position: absolute;
+    text-align: center;
+    border-radius: 20px;
+    word-wrap: normal;
+}
+
+.rotating-container span{
+  padding: 5%;
+  font-size: .75rem;
+}
+
+.rotating-container p{
+  transition: 1s;
+}
+
+.box1{
+  color: gray;
+  background:white;
+  transition: 2s; 
+  left: 0%;
+}
+
+.box2{
+  color: gray;
+  background:white;
+  transition: 2s;
+  left: 20%; 
+}
+
+.box3{
+  color: gray;
+  background:white;
+  transition: 2s;
+  left: 40%; 
+}
+
+.box4{
+  color: gray;
+  background:white;
+  transition: 2s;
+  left: 60%; 
+}
+
+.box5{
+  color: gray;
+  background:white;
+  transition: 2s; 
+  left: 80%;
+}
+
+.button{
+    position: relative;
+    top: 200px;
+}
+
+.small-view{
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .small-view {
+    display: block;
+  }
+  .container-for-rotating-container{
+    display: none;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .small-view {
+    display: block;
+  }
+  .container-for-rotating-container{
+    display: none;
+  }
+}

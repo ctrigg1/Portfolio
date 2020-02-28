@@ -9,6 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Coda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/index.css">
 
     <title>My Homepage</title>
 
@@ -20,51 +21,22 @@
   <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyB7XV91gKexudnCtXvCt3doaDhZhAs1z88",
-      authDomain: "portfolio-87a90.firebaseapp.com",
-      databaseURL: "https://portfolio-87a90.firebaseio.com",
-      projectId: "portfolio-87a90",
-      storageBucket: "portfolio-87a90.appspot.com",
-      messagingSenderId: "251994824763",
-      appId: "1:251994824763:web:e137287400f00f61ca7c1e",
-      measurementId: "G-R7DLHT4ND9"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    db = firebase.firestore();
-
-  </script>
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <script src="assets/index.js"></script>
     
 </head>
 
-<body>
+<body class="bg-light">
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            My Projects
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="./chat.html">Chatroom</a>
-            <a class="dropdown-item" href="./nasa.html">Pic of the Day</a>
-            <a class="dropdown-item" href="./wc.html">Wage Calculator</a>
-          </div>
-        </li>
-      </ul>
+
+    <div class="btn-group">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        My Projects
+      </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="./chat.html">Chatroom</a>
+          <a class="dropdown-item" href="./nasa.html">Pic of the Day</a>
+          <a class="dropdown-item" href="./wc.html">Wage Calculator</a>
+      </div>
     </div>
   </nav>
 
@@ -87,11 +59,11 @@
             <p>  &nbsp;&nbsp;&nbsp;&nbsp;This site is utilized as a platform to showcase a few of my programming projects.&nbsp;&nbsp; 
                 If you would like help creating/updating a website or if you would like to work on a project together, feel free to send me an email -- <span class="text-primary">
                 ctl.coding@gmail.com</span>.&nbsp;&nbsp;I will update this page periodically, 
-                so feel free to follow me at the social media links.&nbsp;&nbsp;My coding journey has been pretty unique so far.&nbsp;&nbsp;I learned how to code in C back in college, but I never had the opportunity to really
+                so feel free to follow me at the social media links in the meantime.&nbsp;&nbsp;My coding journey has been pretty unique so far.&nbsp;&nbsp;I learned how to code in C back in college, but I never had the opportunity to really
                 use the skill due to my military service.  &nbsp;&nbsp;Now that I'm no longer on active duty, I'm hoping to finally put my skills to use.&nbsp;&nbsp;Over the last year, I starting taking courses on Udemy as well as reading books to help sharpen my skills.
-                At the moment, I'm proficient in HTML, Javascript, and CSS.&nbsp;&nbsp;I'm learning Node.js and React.js, and I'll post a sample project for those in the near future.&nbsp;&nbsp;If you have any questions, or would like to work on a project together, feel free to contact me.
-                &nbsp;&nbsp;You can check out my code on Github -- <span class="text-primary">https://github.com/ctrigg1</span>. 
-              </p>
+                At the moment, I'm proficient in HTML, Javascript, and CSS.&nbsp;&nbsp;I'm learning Node.js and React.js, and I'll post a sample project for those in the near future.
+                &nbsp;&nbsp;You can check out my code on Github -- <span class="text-primary">https://github.com/ctrigg1.</span> 
+                &nbsp;&nbsp;I welcome any and all feedback!</p>
         </div>
     </div>
 
@@ -99,17 +71,19 @@
 
  
 
-  <div class="container-for-rotating-container my-5 w-75 mx-auto">
-    <h1 class="mt-2 mx-auto w-75">What does it all mean?<span>&#128531</span></h1>
-    <div class="rotating-container box1 box1-p"><p class="mt-2 text-primary">HTML</p>Adds content to websites</div>
-    <div class="rotating-container box2 box2-p"><p class="mt-2 text-primary">Javascript</p>Adds functionality to websites</div>
-    <div class="rotating-container box3 box3-p"><p class="mt-2 text-primary">CSS</p>Adds style and structure to your website</div>
-    <div class="rotating-container box4 box4-p"><p class="mt-2 text-primary">Node.js</p>Used for server-side programming</div>
-    <div class="rotating-container box5 box5-p"><p class="mt-2 text-primary">React.js</p>Makes your website faster</div>
+  <div class="container container-for-rotating-container mb-0 mt-5 w-75 mx-auto">
+    <h1 class="my-5 mx-auto w-75">What does it all mean?<span>&#128531</span></h1>
+    <div class="rotating-container-div">
+      <div class="rotating-container box1"><p class="mt-2 text-primary">HTML</p><span>Adds content to websites</span></div>
+      <div class="rotating-container box2"><p class="mt-2 text-primary">Javascript</p><span>Adds functionality to websites</span></div>
+      <div class="rotating-container box3"><p class="mt-2 text-primary">CSS</p><span>Adds style and structure to your website</span></div>
+      <div class="rotating-container box4"><p class="mt-2 text-primary">Node.js</p><span>Used for server-side programming</span></div>
+      <div class="rotating-container box5"><p class="mt-2 text-primary">React.js</p><span>Makes your website faster</span></div>
+    </div>
   </div>  
 
-  <div class="my-5 w-75 mx-auto small-view">
-    <h1 class="mt-2 mx-auto">What does it all mean?<span>&#128531</span></h1>
+  <div class="container my-5 w-75 mx-auto small-view">
+    <h1 class="my-5 mx-auto">What does it all mean?<span>&#128531</span></h1>
     <ul>
       <div class=""><p class="mt-2 text-primary d-inline">HTML</p>--Adds content to websites</div>
       <div class=""><p class="mt-2 text-primary d-inline">Javascript</p>--Adds functionality to websites</div>
@@ -120,10 +94,10 @@
   </div>  
 
 
-  <div class="container w-75 py-5">
-    <h3>For those wanting to dive into the wonderful world coding, check out the resources below:</h3>
+  <div class="container w-75 py-0">
+    <h3>For those wanting to dive into the wonderful world of coding, check out the resources below:</h3>
     <ul>
-      <li>Udemy</li>
+      <li>Udemy....<a href="https://www.udemy.com/share/101XjUCEAbc11UQHQ=/">JavaScript: Understanding the Weird Parts</a></li>
       <li>Net Ninja Tutorials on Youtube</li>
       <li>MDN web docs</li>
       <li>Bootstrap</li>
@@ -132,7 +106,27 @@
     </ul>
   </div>
 
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyB7XV91gKexudnCtXvCt3doaDhZhAs1z88",
+      authDomain: "portfolio-87a90.firebaseapp.com",
+      databaseURL: "https://portfolio-87a90.firebaseio.com",
+      projectId: "portfolio-87a90",
+      storageBucket: "portfolio-87a90.appspot.com",
+      messagingSenderId: "251994824763",
+      appId: "1:251994824763:web:e137287400f00f61ca7c1e",
+      measurementId: "G-R7DLHT4ND9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    db = firebase.firestore();
 
+  </script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <script src="assets/index.js"></script>
 
     <footer>
         <div>

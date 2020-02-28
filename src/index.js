@@ -1,38 +1,37 @@
-import './index.css';
-
 const box1 = document.querySelector('.box1');
 const box2 = document.querySelector('.box2');
 const box3 = document.querySelector('.box3');
 const box4 = document.querySelector('.box4');
 const box5 = document.querySelector('.box5');
-const posit = ['box1-p','box2-p','box3-p','box4-p','box5-p'];
+const boxArray = [box1, box2, box3, box4, box5];
 
 let index = 0;
-let newArrIndex = 0;
-
-console.log(index);
 
 const rotation = setInterval(() => {
-    let newArr = posit.slice(index+1).concat(posit.slice(0, index+1));
 
-        box1.classList = 'rotating-container box1';
-        box1.classList.add(newArr[newArrIndex]);
-
-        box2.classList = 'rotating-container box2';
-        box2.classList.add(newArr[newArrIndex+1]);
-
-        box3.classList = 'rotating-container box3';
-        box3.classList.add(newArr[newArrIndex+2]);;
-
-        box4.classList = 'rotating-container box4';
-        box4.classList.add(newArr[newArrIndex+3]);
-
-        box5.classList = 'rotating-container box5';
-        box5.classList.add(newArr[newArrIndex+4]);
-
+        console.log(boxArray[index].firstChild)
+        if(index === 0){
+          boxArray[index].style.backgroundColor = "mediumblue";
+          boxArray[index].style.color = "white";
+          boxArray[index].firstChild.classList.remove("text-primary");
+          boxArray[index].firstChild.style.color = "white";
+          boxArray[index + 4].style.backgroundColor = "white";
+          boxArray[index + 4].style.color = "gray";
+          boxArray[index + 4].firstChild.classList.add("text-primary");
+          boxArray[index + 4].firstChild.style.color = "";
+        } else {
+          boxArray[index].style.backgroundColor = "mediumblue";
+          boxArray[index].style.color = "white";
+          boxArray[index].firstChild.classList.remove("text-primary");
+          boxArray[index].firstChild.style.color = "white";
+          boxArray[index - 1].style.backgroundColor = "white"; 
+          boxArray[index - 1].style.color = "gray";
+          boxArray[index - 1].firstChild.classList.add("text-primary"); 
+          boxArray[index - 1].firstChild.style.color = "";         
+        }
         if(index >= 4){
             index = 0;
         } else {
         index++;
         }
-}, 4000);
+}, 3000);
