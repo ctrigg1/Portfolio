@@ -37,20 +37,23 @@ html,body{
 
 .rotating-container{
     width: 18%;
-    height: 80%;
+    height: 100%;
+    padding: 1%;
+    box-sizing: border-box;
     position: absolute;
     text-align: center;
     border-radius: 20px;
     word-wrap: normal;
 }
 
-.rotating-container span{
-  padding: 5%;
-  font-size: .75rem;
-}
-
 .rotating-container p{
   transition: 1s;
+  line-height: .5;
+}
+
+.rotating-container span{
+  padding: 1%;
+  font-size: .75rem;
 }
 
 .box1{

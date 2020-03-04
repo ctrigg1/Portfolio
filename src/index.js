@@ -9,22 +9,21 @@ let index = 0;
 
 const rotation = setInterval(() => {
 
-        console.log(boxArray[index].firstChild)
         if(index === 0){
-          boxArray[index].style.backgroundColor = "mediumblue";
+          boxArray[index].classList.add('bg-primary');
           boxArray[index].style.color = "white";
           boxArray[index].firstChild.classList.remove("text-primary");
           boxArray[index].firstChild.style.color = "white";
-          boxArray[index + 4].style.backgroundColor = "white";
+          boxArray[index + 4].classList.remove('bg-primary');
           boxArray[index + 4].style.color = "gray";
           boxArray[index + 4].firstChild.classList.add("text-primary");
           boxArray[index + 4].firstChild.style.color = "";
         } else {
-          boxArray[index].style.backgroundColor = "mediumblue";
+          boxArray[index].classList.add('bg-primary');
           boxArray[index].style.color = "white";
           boxArray[index].firstChild.classList.remove("text-primary");
           boxArray[index].firstChild.style.color = "white";
-          boxArray[index - 1].style.backgroundColor = "white"; 
+          boxArray[index - 1].classList.remove('bg-primary'); 
           boxArray[index - 1].style.color = "gray";
           boxArray[index - 1].firstChild.classList.add("text-primary"); 
           boxArray[index - 1].firstChild.style.color = "";         
@@ -35,3 +34,5 @@ const rotation = setInterval(() => {
         index++;
         }
 }, 3000);
+
+
