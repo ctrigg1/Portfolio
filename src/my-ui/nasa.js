@@ -37,7 +37,7 @@ const nasaPic = new NASA();
 const newDate = new Date(); 
 const pattern = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
 const currentDate = newDate.getFullYear() + "-" + (newDate.getMonth()+ 1) + "-" + newDate.getDate();
-const cutoffDate = new Date(1996,01,01).getTime();
+const cutoffDate = new Date('1996-01-01').getTime();
 
 nasaPic.GetData(currentDate)
 .then(data => nasaPic.updateUI(data, displayDate, description, displayTitle))

@@ -9,7 +9,6 @@ let index = 0;
 
 const rotation = setInterval(() => {
 
-        console.log(boxArray[index].firstChild)
         if(index === 0){
           boxArray[index].style.backgroundColor = "mediumblue";
           boxArray[index].style.color = "white";

@@ -1,9 +1,15 @@
 {
-  "name": "babelpractice",
+  "name": "babel",
   "version": "1.0.0",
-  "presets": [
-    "@babel/preset-env"
-  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins":  [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,8 +22,12 @@
   "devDependencies": {
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.7.5",
+    "@babel/preset-react": "^7.8.3",
     "css-loader": "^3.2.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "style-loader": "^1.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",

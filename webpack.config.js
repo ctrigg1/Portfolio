@@ -5,7 +5,8 @@ module.exports = {
         index: './src/index.js',
         app: './src/my-ui/app.js',
         nasa: './src/my-ui/nasa.js',
-        chat: './src/my-ui/chat-app.js'
+        chat: './src/my-ui/chat-app.js',
+        todo: './src/my-ui/todo.jsx',
     },
     output: {
         path: path.resolve(__dirname, 'distro/assets'),
@@ -13,21 +14,25 @@ module.exports = {
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'distro'),
-        publicPath: "/assets/", // here's the change
+        publicPath: "/assets/",
     },
     module: {
-        rules : [{
+        rules : [
+          {
             test: /\.js$/,
             exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                presets: ["@babel/preset-env"]
-                }
-            },
+            use: 'babel-loader'
+          },
+          {
+            test: /\.jsx$/,
+            exclude: /node_modules/,
+            use: 'babel-loader'
+          },
+          {
             test: /\.css$/,
             use: ['style-loader', 'css-loader']
-        }]
+          },
+        ]
     }
 };
 
