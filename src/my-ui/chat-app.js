@@ -11,14 +11,21 @@ const msgsent = document.querySelector(".msgsent");
 const logOut = document.querySelector(".logout");
 const newuser = document.querySelector(".new-user");
 const signupwindow = document.querySelector(".signupwindow");
-
-// window.addEventListener('load', auth.signOut());
+const formAdmin = document.querySelector(".form-admin");
+const addAdmin = functions.httpsCallable("addAdmin");
+const adminView = document.querySelector(".admin");
+const closeadmin = document.querySelector(".closeadmin");
 
 auth.onAuthStateChanged(response => {
-    if(auth.currentUser.uid) {
-        console.log("user is logged in: ", auth.currentUser.displayName);
+    if(response) {
+        // test of admin custom claim token
+        response.getIdTokenResult().then(TokenResult => {
+          TokenResult.claims.admin ? adminView.style.display = 'block' : 
+          console.log('user is not an administrator');
+        })
+        console.log("user is logged in: ", response.displayName);
             // update UI
-        chatroom.username = auth.currentUser.displayName;
+        chatroom.username = response.displayName;
         chatroom.liveupdates(showChat);
         loginScreen.style.display = 'none';
     } 
@@ -28,6 +35,24 @@ auth.onAuthStateChanged(response => {
 newuser.addEventListener('click', e => {
     e.preventDefault();
     signupwindow.classList.remove('hide');
+})
+
+// add admin custom claim
+formAdmin.addEventListener('submit', e => {
+  e.preventDefault();
+  addAdmin({email: e.target.adminEmail.value})
+  .then(result => console.log(result))
+  .catch(err => console.log(err));
+})
+
+adminView.addEventListener('click', e => {
+  e.preventDefault();
+  formAdmin.style.display = 'block';
+})
+
+closeadmin.addEventListener('click', e => {
+  e.preventDefault();
+  formAdmin.style.display = 'none';
 })
 
 // login or new user auth
@@ -86,5 +111,6 @@ logOut.addEventListener('click', e => {
         window.location.reload(false);
     });
 })
+
 
 
