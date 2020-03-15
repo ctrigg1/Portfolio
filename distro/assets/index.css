@@ -4,6 +4,16 @@ html,body{
   width: 100%;
   font-size: 1.0rem;
 }
+
+.top-display{
+  margin-top: 10%;
+}
+
+.messageStatus{
+  display: none;
+  color: black;
+}
+
 .profile-pic{
   width: 150px;
   height: 150px;
@@ -62,6 +72,7 @@ html,body{
   background:white;
   transition: 2s; 
   left: 0%;
+  box-shadow: 1px 1px 4px rgb(0,0,0,0.1);
 }
 
 .box2{
@@ -69,6 +80,7 @@ html,body{
   background:white;
   transition: 2s;
   left: 20%; 
+  box-shadow: 1px 1px 4px rgb(0,0,0,0.1);
 }
 
 .box3{
@@ -76,6 +88,7 @@ html,body{
   background:white;
   transition: 2s;
   left: 40%; 
+  box-shadow: 1px 1px 4px rgb(0,0,0,0.1);
 }
 
 .box4{
@@ -83,6 +96,7 @@ html,body{
   background:white;
   transition: 2s;
   left: 60%; 
+  box-shadow: 1px 1px 4px rgb(0,0,0,0.1);
 }
 
 .box5{
@@ -90,6 +104,7 @@ html,body{
   background:white;
   transition: 2s; 
   left: 80%;
+  box-shadow: 1px 1px 4px rgb(0,0,0,0.1);
 }
 
 .button{

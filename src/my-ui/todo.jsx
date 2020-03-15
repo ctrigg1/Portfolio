@@ -33,9 +33,11 @@ class App extends React.Component {
 
     return(
       <div className="container center-align">
-        <h1 className="white-text">To-do List</h1>
-        <TodoList todos={this.state.todos} deleteTodo={this.deleteTodo} />
-        <TodoAdd addTodo={this.addTodo}/>
+        <div className='container'>
+          <h1 className="white-text">To-do List</h1>
+          <TodoList todos={this.state.todos} deleteTodo={this.deleteTodo} />
+          <TodoAdd addTodo={this.addTodo}/>
+        </div>
       </div> 
     )
   }

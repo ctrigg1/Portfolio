@@ -11,19 +11,6 @@
 </head>
 <body>
 
-  <div class="loginPage">
-    <div class="loginBox">
-      <h1>Welcome to the Chatroom</h1>
-
-        <form action="" class="logIn">
-          <input type="email" placeholder="email" name="email" required>
-          <input type="password" placeholder="password" name="password" required>
-          <input type="submit" name="logIn" value="Log-In">
-          <span><a href="" class="new-user">New users sign up here</a></span>
-        </form>
-    </div>
-  </div>
-
   <div class="signupwindow hide">
     <form class="signup">
       <h3>All information below is required</h3>
@@ -37,9 +24,18 @@
 
     <div class="grid">
 
-      <!-- <aside class="aside2">
+      <div class="loginPage">
+        <div class="loginBox">
+          <h1>Welcome to the Chatroom</h1>
     
-      </aside> -->
+            <form action="" class="logIn">
+              <input type="email" placeholder="email" name="email" required>
+              <input type="password" placeholder="password" name="password" required>
+              <input type="submit" name="logIn" value="Log-In">
+              <span><a href="" class="new-user">New users sign up here</a></span>
+            </form>
+        </div>
+      </div>
 
       <aside class="aside">
 
@@ -53,7 +49,7 @@
 
         <div class="chatrooms">
           <label for="rooms">Change Room</label>
-          <select class="rooms" name="rooms" id="Rooms">
+          <select class="rooms cursor" name="rooms" id="Rooms">
             <option value="main">Main</option>
             <option value="games">Games</option>
             <option value="music">Music</option>
@@ -62,13 +58,24 @@
         </div>
 
           <div class="logorreturn">
-            <button type="button" class="logout">Log Out</button>
+            <button type="button" class="logout cursor">Log Out</button>
             <a class="return" href="./index.html">Return to Homepage</a>
+          </div>
+          <div>
+            <a class="admin" href="">Administrator</a>
           </div>
       </aside>
 
       <main class="main">
             <div class="show-chat"></div>
+            <div class="div-admin">
+              <form class="form-admin"  action="">
+                <label for="">Enter email to add adminstrator rights</label>
+                <span class="closeadmin cursor">x</span>
+                <input name='adminEmail' style="display: block" type="text">
+                <button>Add Admin</button>
+              </form>
+          </div>
       </main>
       
     </div>
@@ -79,9 +86,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-functions.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
 
 <script>
@@ -101,6 +106,7 @@
   firebase.analytics();
   const db = firebase.firestore();
   const auth = firebase.auth();
+  const functions = firebase.functions();
   
 </script>
 

@@ -13,20 +13,20 @@
 
     <title>My Homepage</title>
 
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
-
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-functions.js"></script>
+
+  <style>
+
+  </style>
     
 </head>
 
-<body class="bg-light">
+<body class="bg-white">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 p-2 shadow fixed-top justify-content-end">
 
     <div class="btn-group">
       <button type="button" class="btn dropdown-toggle bg-primary text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,9 +39,37 @@
           <a class="dropdown-item" href="./todo.html">Todo w/ React</a>
       </div>
     </div>
+
+    <button type="button" class="btn mx-2" data-toggle="modal" data-target="#exampleModal">
+      Contact Me
+    </button>
   </nav>
 
-  <main class="container w-75">
+  <!-- Bootstrap modal for contact email -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Contact Me</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form-contactUs" action="">
+            <input type="text" class="d-block my-1" placeholder="First Name" name="firstName">
+            <input type="text" class="d-block my-1" placeholder="Last Name" name="lastName">
+            <input type="email" class="d-block my-1" placeholder="Your Email Address" name="emailAddress" required>
+            <textarea id="" cols="40" rows="5" placeholder="Enter your comments here" name="body" required></textarea>
+            <button type="submit" class="btn btn-primary d-block">Send</button>
+            <p class="messageStatus mt-3"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="top-display container w-50 bg-light p-2 shadow">
     <div>
       <div class="float-left mr-3">
         <img src="./img/roozbeh-eslami-YlVjrBkfXt8-unsplash.jpg" alt="" class="profile-pic">
@@ -56,7 +84,7 @@
     <div class="">
         <div class="mt-4">
 
-            <h1>Welcome to<span class="text-primary"> My Portfolio</span></h1>
+            <h1 class="text-center">Welcome to<span class="text-primary"> My Portfolio</span></h1>
             <p>  &ensp;This site is utilized as a platform to showcase a few of my programming projects.&ensp; 
                 If you would like help creating/updating a web application or if you would like to work on a project together, feel free to send me an email -- <span class="text-primary">
                 ctl.coding@gmail.com</span>.&ensp;My coding journey has been pretty unique so far.&ensp;I learned how to code in C back in college, but I never had the opportunity to really
@@ -83,9 +111,9 @@
     </div>
   </div>  
 
-  <div class="container my-5 w-75 mx-auto small-view">
+  <div class="container my-5 w-75 mx-auto small-view text-center">
     <h1 class="my-5 mx-auto">What does it all mean?<span>&#128531</span></h1>
-    <ul>
+    <ul class="text-left">
       <div class=""><p class="mt-2 text-primary d-inline">HTML</p>--Adds content to websites</div>
       <div class=""><p class="mt-2 text-primary d-inline">Javascript</p>--Adds functionality to websites</div>
       <div class=""><p class="mt-2 text-primary d-inline">CSS</p>--Adds style and structure to your website</div>
@@ -95,7 +123,7 @@
   </div>  
 
 
-  <div class="container w-75 mt-5 py-0">
+  <div class="container w-50 mt-5 py-0 bg-light p-2 shadow">
     <h5>For those wanting to dive into the wonderful world of coding, check out the resources below:</h3>
     <ul>
       <li>Udemy</li>
@@ -120,7 +148,8 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
-    db = firebase.firestore();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
 
   </script>
       <script async defer src="https://buttons.github.io/buttons.js"></script>
