@@ -27,11 +27,7 @@ const rotation = setInterval(() => {
           boxArray[index].style.color = "white";
           boxArray[index].firstChild.classList.remove("text-primary");
           boxArray[index].firstChild.style.color = "white";
-<<<<<<< HEAD
-          boxArray[index - 1].classList.remove('bg-primary'); 
-=======
           boxArray[index - 1].classList.remove('bg-primary');
->>>>>>> ReactApp
           boxArray[index - 1].style.color = "gray";
           boxArray[index - 1].firstChild.classList.add("text-primary"); 
           boxArray[index - 1].firstChild.style.color = "";         
@@ -43,8 +39,6 @@ const rotation = setInterval(() => {
         }
 }, 3000);
 
-<<<<<<< HEAD
-=======
 form_contactUs.addEventListener('submit', e => {
   e.preventDefault();
   messagefromclient = {
@@ -65,5 +59,4 @@ form_contactUs.addEventListener('submit', e => {
   })
 })
 
->>>>>>> ReactApp
 
