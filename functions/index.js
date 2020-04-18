@@ -38,11 +38,10 @@ exports.contactEmail = functions.https.onCall((data, context) => {
     });
 
     const mailOptions = {
-      from: `${data.emailAddress}`,
+      from: `${data.email}`,
       to: "ctl.coding@gmail.com",
-      subject: 'testing this out',
-      text: 'still testing this out',
-      html: `<p>${data.body}</p>`,
+      subject: 'Website Inquiry',
+      html: `<p>From: ${data.email} <br> ${data.body}</p>`,
     }
 
     transporter.sendMail(mailOptions, (err, info) => {

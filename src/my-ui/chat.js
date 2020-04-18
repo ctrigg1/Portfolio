@@ -1,4 +1,5 @@
-import {Chatroom} from './chat-ui';
+import { Chatroom } from './chat-ui';
+import './chat.css';
 
 const newmsg = document.querySelector(".new-chat");
 const showChat = document.querySelector(".show-chat");

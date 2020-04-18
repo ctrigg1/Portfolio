@@ -1,4 +1,5 @@
 import { Workcomp } from './workcomp';
+import './app.css';
 
 const workcomp = new Workcomp();
 const states = document.querySelector('.states');
